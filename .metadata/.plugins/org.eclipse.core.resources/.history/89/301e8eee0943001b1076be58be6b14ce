@@ -1,0 +1,31 @@
+public class Tile {
+	private int number;
+    private boolean Merged;
+    
+    Tile(int n) {
+    	number = n;
+    }
+ 
+    int getNumber() {
+        return number;
+    }
+    
+    boolean getMerged() {
+        return Merged;
+    }
+    
+    void setNumber(int n) {
+        number = n;
+    }
+ 
+    void setMerged(boolean m) {
+        Merged = m;
+    }
+ 
+    boolean canMerge(Tile t) {
+    	if (t != null && !Merged && !t.Merged && t.getNumber() == number)
+    		return true;
+    	else
+    		return false;
+    }
+}
